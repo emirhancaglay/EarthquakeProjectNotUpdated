@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Op02qfKnhB8LBmQOLxdSwSIL3djPwqJnayEUZVw8CwY=",
+  "Source": "Earthquakeapi",
+  "BasePath": "_content/Earthquakeapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

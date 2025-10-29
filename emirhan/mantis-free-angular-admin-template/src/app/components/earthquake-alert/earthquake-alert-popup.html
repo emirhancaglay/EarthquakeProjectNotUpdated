@@ -1,0 +1,8 @@
+<div class="popup" *ngIf="data">
+  <h2>⚠️ Yakınınızda Deprem Oldu!</h2>
+  <p>
+    📍 <strong>{{ data.closestLocationName }}</strong> konumuna yakın,
+    <strong>{{ data.mag }}</strong> büyüklüğünde bir deprem meydana geldi.
+  </p>
+  <p>Zaman: {{ data.date }}</p>
+</div>

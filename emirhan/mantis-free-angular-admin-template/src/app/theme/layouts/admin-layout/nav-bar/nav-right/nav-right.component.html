@@ -1,0 +1,72 @@
+<ul class="list-unstyled d-flex align-items-center m-0">
+
+  <!-- GitHub Linki -->
+  <li class="pc-h-item">
+    <a href="https://github.com/codedthemes/mantis-free-angular-admin-template"
+       target="_blank"
+       class="pc-head-link me-0 bg-gray-200">
+      <i antIcon type="github" theme="outline"></i>
+    </a>
+  </li>
+
+  <!-- Bildirim (Zil) Dropdown -->
+  <li class="dropdown pc-h-item" ngbDropdown>
+    <a href="javascript:void(0)"
+       class="pc-head-link dropdown-toggle arrow-none me-0 bg-gray-200"
+       ngbDropdownToggle>
+      <i antIcon type="bell" theme="outline"></i>
+      <span class="badge bg-primary pc-h-badge">{{ notifications.length }}</span>
+    </a>
+
+    <!-- EarthquakeAlertDropdownComponent dropdown içeriği -->
+    <div class="dropdown-menu dropdown-menu-end pc-h-dropdown"
+         style="min-width: 300px; max-height: 400px; overflow-y: auto"
+         ngbDropdownMenu>
+      <div class="dropdown-header d-flex align-items-center justify-content-between">
+        <h5 class="m-0">Deprem Uyarıları</h5>
+        <a class="bg-transparent" title="Tümünü temizle" href="javascript:void(0)">
+          <i class="text-success d-flex f-20" antIcon theme="outline" type="check-circle"></i>
+        </a>
+      </div>
+
+      <div class="dropdown-divider mb-0"></div>
+
+      <!-- Burada bileşeni gösteriyoruz -->
+      <app-earthquake-alert-dropdown></app-earthquake-alert-dropdown>
+
+      <div class="dropdown-divider mt-0"></div>
+      <div class="text-center py-2">
+        <a href="javascript:void(0)" class="link-primary">Tümünü Gör</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Kullanıcı Profili -->
+  <li class="dropdown pc-h-item header-user-profile" ngbDropdown>
+    <a href="javascript:void(0)"
+       class="pc-head-link dropdown-toggle arrow-none me-0"
+       ngbDropdownToggle>
+      <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="user-avatar me-2" />
+      <span class="f-w-600">John Doe</span>
+    </a>
+    <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown"
+         ngbDropdownMenu>
+      <div class="dropdown-header">
+        <div class="d-flex mb-1">
+          <div class="flex-shrink-0">
+            <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="user-avatar wid-35" />
+          </div>
+          <div class="flex-grow-1 ms-3 text-start">
+            <h6 class="mb-0">JWT User</h6>
+            <span>UI/UX Designer</span>
+          </div>
+          <a href="javascript:void(0)" class="bg-transparent">
+            <i class="d-flex f-20" antIcon theme="outline" type="logout"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+</ul>
+

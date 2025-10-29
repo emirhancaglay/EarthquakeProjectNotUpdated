@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-card cardTitle="Deprem Verileri">
+      <app-earthquake-alert></app-earthquake-alert>
+    </app-card>
+
+    <app-earthquake-alert-popup *ngIf="latestDangerousQuake" [data]="latestDangerousQuake"></app-earthquake-alert-popup>
+
+  </div>
+</div>
+

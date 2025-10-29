@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Deprem Uyarıları</h5>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Yer</th>
+          <th>Büyüklük</th>
+          <th>Tarih</th>
+          <th>Tehlikeli mi?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let quake of earthquakes">
+          <td>{{ quake.closestLocationName }}</td>
+          <td>{{ quake.magnitude }}</td>
+          <td>{{ quake.date | date:'short' }}</td>
+          <td>
+              <span [class.text-danger]="quake.isDangerous">
+                {{ quake.isDangerous ? 'Evet' : 'Hayır' }}
+              </span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

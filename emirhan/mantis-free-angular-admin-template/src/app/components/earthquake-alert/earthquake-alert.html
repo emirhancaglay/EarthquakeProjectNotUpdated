@@ -1,0 +1,28 @@
+<table>
+  <thead>
+  <tr>
+    <th>Tarih</th>
+    <th>Lokasyon</th>
+    <th>Büyüklük</th>
+    <th>Derinlik (km)</th>
+    <th>Koordinatlar</th>
+    <th>Uyarı</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let quake of earthquakes">
+    <td>{{ quake.date }}</td>
+    <td>{{ quake.title }}</td>
+    <td>{{ quake.mag }}</td>
+    <td>{{ quake.depth }}</td>
+    <td>{{ quake.geojson.coordinates[1] }}, {{ quake.geojson.coordinates[0] }}</td>
+    <td>
+      <span *ngIf="quake.isDangerous" style="color: red; font-weight: bold;">
+    ⚠️ Yakın Deprem! ({{ quake.closestLocationName }})
+      </span>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+
